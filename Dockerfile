@@ -5,7 +5,7 @@ apk add --update nodejs nodejs-npm
 
 ADD node-app /node-app
 WORKDIR /node-app
-RUN npm install
+RUN npm install && mkdir -p /myvol
 EXPOSE 3000
 #CMD node index.js 
 CMD tail -f /dev/null  
