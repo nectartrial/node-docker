@@ -1,7 +1,7 @@
 FROM alpine:edge
 RUN \
 echo http://dl-4.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories && \
-apk add --update nodejs nodejs-npm
+apk add --update curl nodejs nodejs-npm
 
 ADD node-app /node-app
 WORKDIR /node-app
